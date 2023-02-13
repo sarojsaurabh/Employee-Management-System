@@ -52,7 +52,7 @@ elif (selected == "Employees"):
     emp_pass = st.text_input("Enter Password:", type="password")
     btn = st.button("Login")
     if btn:
-        mydb = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@', database='employee')
+        mydb = mysql.connector.connect(host='localhost', user='root', password='xxxxx', database='employee')
         c = mydb.cursor()
         c.execute("select * from emp_pass")
         for row in c:
@@ -80,7 +80,7 @@ elif (selected == "Employees"):
                 choice = st.selectbox("Features", ("None", "Search in Database", "Show all"))
                 if choice == "Search in Database":
 
-                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='xxxx',
                                                     database='employee')
                     e = mydb2.cursor()
                     e.execute("select * from emp_data")
@@ -120,7 +120,7 @@ elif (selected == "Employees"):
 
 
                 elif choice == "Show all":
-                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                 database='employee')
                     e = mydb2.cursor()
                     e.execute("select * from emp_data")
@@ -141,7 +141,7 @@ elif (selected == "Employees"):
                     orientation='horizontal')
 
                 if selected2 == "Current Projects":
-                    mydb5 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb5 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                     database='employee')
                     f = mydb5.cursor()
                     f.execute("select * from working_projects")
@@ -169,7 +169,7 @@ elif (selected == "Employees"):
 
 
                 if selected2=="New Projects":
-                      mydb5 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                      mydb5 = mysql.connector.connect(host='localhost', user='root', password='xxxxx',
                                                     database='employee')
                       f = mydb5.cursor()
                       f.execute("select * from new_projects")
@@ -186,7 +186,7 @@ elif (selected == "Employees"):
                     options=["Message From Admin", "Contact Admin","Contact other Employees","Message from Employees"],
                     )
                 if selected3=="Message From Admin":
-                      mydb8 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                      mydb8 = mysql.connector.connect(host='localhost', user='root', password='xxxxx',
                                                     database='employee')
                       y = mydb8.cursor()
                       y.execute("select * from message_to_emp order by date_time DESC")
@@ -198,7 +198,7 @@ elif (selected == "Employees"):
                       st.dataframe(df8)
                       
                 elif selected3=="Contact Admin":
-                      mydb14 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                      mydb14 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                     database='employee')
                       
                       
@@ -220,7 +220,7 @@ elif (selected == "Employees"):
                       
 
                 elif selected3=="Contact other Employees":
-                      mydb14 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                      mydb14 = mysql.connector.connect(host='localhost', user='root', password='xxxxx',
                                                     database='employee')
                       
                       
@@ -241,7 +241,7 @@ elif (selected == "Employees"):
                           st.write("Message sent")
 
                 elif selected3=="Message from Employees":
-                      mydb14 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                      mydb14 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                     database='employee')
                       
                       
@@ -262,7 +262,7 @@ elif selected=="Admin":
     admin_pass = st.text_input("Enter Password:", type="password")
     btn = st.button("Login")
     if btn:
-        mydb = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@', database='employee')
+        mydb = mysql.connector.connect(host='localhost', user='root', password='xxxxx', database='employee')
         c = mydb.cursor()
         c.execute("select * from founders")
         for row in c:
@@ -292,7 +292,7 @@ elif selected=="Admin":
                     )
 
                 if selected5=="Show all Database":
-                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                 database='employee')
                     e = mydb2.cursor()
                     e.execute("select * from emp_data")
@@ -308,7 +308,7 @@ elif selected=="Admin":
                         st.write("Total no of Employees",count)
 
                 if selected5=="Search Database":
-                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb2 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                 database='employee')
                     e = mydb2.cursor()
                     e.execute("select * from emp_data")
@@ -351,7 +351,7 @@ elif selected=="Admin":
                                           emp_salary=st.text_input("Salary(per month):")
                                           emp_joining=st.text_input("Joining date(yyyy-mm-dd):")
                                           emp_password=st.text_input("Password",type='password')
-                                          mydb2 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',database='employee')
+                                          mydb2 = mysql.connector.connect(host='localhost', user='root', password='xxxxx',database='employee')
                                           e = mydb2.cursor()
                                           
                                           btn16=st.button("Update")
@@ -364,7 +364,7 @@ elif selected=="Admin":
 
                                       if choice=="Update Entry":
                                             emp_id=st.text_input("Employee Id:")
-                                            mydb3=mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',database='employee')
+                                            mydb3=mysql.connector.connect(host='localhost', user='root', password='xxxxx',database='employee')
                                             f=mydb3.cursor()
                                             f.execute("select * from emp_data")
                     
@@ -402,7 +402,7 @@ elif selected=="Admin":
                     t=st.text_input("Enter Book Id you want to remove:")
                     btn21=st.button("Remove-")
                     if btn21:
-                      mydb7=mysql.connector.connect(host='localhost',user='root',password='Saurabh2103@',database='employee')
+                      mydb7=mysql.connector.connect(host='localhost',user='root',password='xxxxxx',database='employee')
                       e=mydb7.cursor()
                       f="delete from emp_data where emp_id='"+t+"'"
                       e.execute(f)
@@ -416,7 +416,7 @@ elif selected=="Admin":
                            )
                if selected9=="Message Employees":
                    
-                      mydb17 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                      mydb17 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                     database='employee')
                       
                       
@@ -438,7 +438,7 @@ elif selected=="Admin":
                               st.write("Message sent")
 
                if selected9=="Inbox":
-                    mydb17 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb17 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                     database='employee')
                       
                       
@@ -457,7 +457,7 @@ elif selected=="Admin":
                            options=["Currently Working","New Projects"])
 
                 if selected11=="Currently Working":
-                    mydb17 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                    mydb17 = mysql.connector.connect(host='localhost', user='root', password='xxxxx',
                                                     database='employee')
                       
                       
@@ -479,7 +479,7 @@ elif selected=="Admin":
                             y.execute("insert into working_projects values(%s,%s,%s)",(empid,pro,comp))
                             st.write("updation successful !!!")
                 if selected11=="New Projects":
-                     mydb17 = mysql.connector.connect(host='localhost', user='root', password='Saurabh2103@',
+                     mydb17 = mysql.connector.connect(host='localhost', user='root', password='xxxxxx',
                                                     database='employee')
                       
                       
